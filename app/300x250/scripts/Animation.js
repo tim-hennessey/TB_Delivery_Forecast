@@ -10,8 +10,6 @@ app.Animation = (function () {
     var tl4 = new TimelineMax({repeat: -1, paused: true});
     var tl5 = new TimelineMax({repeat: -1, paused: true});
 
-    // var wiggletl = new TimelineMax({repeat: -1});
-
     var pintl1 = new TimelineMax();
     var pintl2 = new TimelineMax();
     var pintl3 = new TimelineMax();
@@ -19,6 +17,8 @@ app.Animation = (function () {
     var pintl5 = new TimelineMax();
 
     var tltxt = new TimelineMax();
+
+    var wiggletl = new TimelineMax({repeat: -1});
 
     var pin1 = document.getElementById('pin1');
     var pin2 = document.getElementById('pin2');
@@ -33,8 +33,6 @@ app.Animation = (function () {
     var icicle1 = document.getElementById('icicle1');
     var icicle2 = document.getElementById('icicle2');
 
-    // var fog = document.getElementById('fog');
-
     var cta = document.getElementById('cta');
     var cta_bg = document.getElementById('cta_bg');
 
@@ -47,12 +45,12 @@ app.Animation = (function () {
 
         t.set(banner, {opacity: 1});
         t.set("#container", {perspective: 600});
+        t.set("#container2", {perspective: 600});
         t.set(pin1, {y: "-=10", transformOrigin: "50% 100%"});
         t.set(pin2, {y: "-=10", transformOrigin: "50% 100%"});
         t.set(pin3, {y: "-=10", transformOrigin: "50% 100%"});
         t.set(pin4, {y: "-=10", transformOrigin: "50% 100%"});
         t.set(pin5, {y: "-=10", transformOrigin: "50% 100%"});
-        t.set(fog, {scale: 2, transformOrigin: "50% 50%"});
 
         t.set(icicle1, {y: "-=25", scaleY: .5, transformOrigin: "50% 0%"});
         t.set(icicle2, {y: "-=25", scaleY: .5, transformOrigin: "50% 0%"});
@@ -77,36 +75,63 @@ app.Animation = (function () {
 
         t.to(icicle1, 5, {y: "+=25", scaleY: 1, ease: Sine.easeOut});
         t.to(icicle2, 5, {y: "+=25", scaleY: 1, ease: Sine.easeOut});
-        // t.to(fog, 5, {y: "-=80", scaleY: 1.5, scaleX: 1, ease: Sine.easeOut});
 
-        var total = 1000;
+        wiggletl.to(txt1, .5, {x: '+=10', rease: Sine.easeOut})
+            .to(txt1, 3, {x: '-=10', rotation:0, ease: Sine.easeIn});
+
+        var total = 50;
         var container = document.getElementById("container"), w = window.innerWidth, h = window.innerHeight;
 
         for (var i = 0; i < total; i++) {
             var Div = document.createElement('div');
             t.set(Div, {
                 attr: {class: 'dot'},
-                x: R(-100, w),
-                y: R(-100, -50)
-                // opacity: R(.25, 1)
+                x: R(-100, -200),
+                y: R(-100, 0),
+                scale: R(10, 100),
+                opacity: R(.05, .075)
             });
             container.appendChild(Div);
             animm(Div);
         }
 
         function animm(elm) {
-            t.to(elm, R(16, 18), {y: h - 50, ease: Linear.easeNone, repeat: -1, delay: -150});
-            t.to(elm, R(16, 18), {x: '+=50', repeat: -1, yoyo: true, ease: Sine.easeInOut});
+            t.to(elm, R(1, 3), {x: w - 50, ease: Linear.easeNone, repeat: -1, delay: -20});
+            t.to(elm, R(2, 4), {y: '+=100', repeat: -1, yoyo: true, ease: Sine.easeInOut});
         }
 
         function R(min, max) {
             return min + Math.random() * (max - min)
         }
 
-        // wiggletl.to(txt1, .065, {y: '-=1', rotation:1, ease: Sine.easeInOut})
-        //     .to(txt1, .065, {y: '+=1', rotation:0, ease: Sine.easeInOut})
-        //     .to(txt1, .065, {y: '-=1', rotation:-1, ease: Sine.easeInOut})
-        //     .to(txt1, .065, {y: '+=1', rotation:0, ease: Sine.easeInOut});
+
+
+
+        var total2 = 50;
+        var container2 = document.getElementById("container2"), w = window.innerWidth, h = window.innerHeight;
+
+        for (var i2 = 0; i2 < total2; i2++) {
+            var Div2 = document.createElement('div2');
+            t.set(Div2, {
+                attr: {class: 'dot'},
+                x: R(-100, -200),
+                y: R(0, 100),
+                // scale: R(10, 100),
+                opacity: R(.25, 1)
+            });
+            container2.appendChild(Div2);
+            animm2(Div2);
+        }
+
+        function animm2(elm2) {
+            t.to(elm2, R(1, 3), {x: w - 50, ease: Linear.easeNone, repeat: -1, delay: -20});
+            t.to(elm2, R(2, 4), {y: '+=100', repeat: -1, yoyo: true, ease: Sine.easeInOut});
+        }
+
+        function R(min, max) {
+            return min + Math.random() * (max - min)
+        }
+
 
 
         pintl1.from(pin1, .25, {scale: "-=.2", opacity: 0, ease: Sine.easeInOut}, "+=3.5")

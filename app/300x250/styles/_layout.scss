@@ -16,23 +16,12 @@ body {
     margin-top: -$banner-height / 2;
     opacity: 0;
 
-    //.dot{
-    //    width:4px;
-    //    height:4px;
-    //    border-radius: 2px;
-    //    background: #FFF;
-    //    //transform: translate3d(0, 0, 0.1px);
-    //    position:absolute;
-    //}
-
-    #fog {
-        left: 0;
-        top: 0;
-        width: $banner-width;
-        height: 200px;
-        opacity: .33;
-        background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 1) 70%);
-        position: absolute;
+    .dot{
+        width:4px;
+        height:4px;
+        border-radius: 2px;
+        background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+        position:absolute;
     }
 
     #icicle1 {
