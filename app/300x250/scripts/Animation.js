@@ -16,19 +16,24 @@ app.Animation = (function () {
     var pintl4 = new TimelineMax();
     var pintl5 = new TimelineMax();
 
+    var theSVG = document.getElementById('theSVG');
+    var theSVG2 = document.getElementById('theSVG2');
+    var lineOneGradient = document.getElementById('lineOneGradient');
+    var lineTwoGradient = document.getElementById('lineTwoGradient');
+    var lineThreeGradient = document.getElementById('lineThreeGradient');
+    var CTAGradient = document.getElementById('CTAGradient');
+
     var tltxt = new TimelineMax();
-
-    var wiggletl = new TimelineMax({repeat: -1});
-
+    
     var pin1 = document.getElementById('pin1');
     var pin2 = document.getElementById('pin2');
     var pin3 = document.getElementById('pin3');
     var pin4 = document.getElementById('pin4');
+    var pin5 = document.getElementById('pin5');
 
     var txt1 = document.getElementById('txt1');
     var txt2 = document.getElementById('txt2');
     var txt3 = document.getElementById('txt3');
-    var txtbox = document.getElementById('txtbox');
 
     var icicle1 = document.getElementById('icicle1');
     var icicle2 = document.getElementById('icicle2');
@@ -72,12 +77,23 @@ app.Animation = (function () {
     // Starts the animation
     function start() {
 
+        t.set(lineOneGradient, {attr:{x1:-300, x2:0}});
+        t.set(lineTwoGradient, {attr:{x1:-300, x2:0}});
+        t.set(lineThreeGradient, {attr:{x1:-300, x2:0}});
+        t.set(CTAGradient, {attr:{x1:-300, x2:0}});
+        t.set(theSVG, {opacity:1});
+        t.set(theSVG2, {opacity:1});
+
+        tltxt.to(lineOneGradient, 3, {attr:{x1:300, x2:600}},"+=1")
+            .to(lineTwoGradient, 3, {attr:{x1:300, x2:600}},"-=2")
+            .to(lineThreeGradient, 3, {attr:{x1:300, x2:600}},"-=1")
+            .to(CTAGradient, 3, {attr:{x1:300, x2:600}},"-=2")
+            .to(cta, .5, {opacity: 1}, "-=2")
+            .to(theSVG2, .5, {opacity: 0}, "-=2");
+
 
         t.to(icicle1, 5, {y: "+=25", scaleY: 1, ease: Sine.easeOut});
         t.to(icicle2, 5, {y: "+=25", scaleY: 1, ease: Sine.easeOut});
-
-        wiggletl.to(txt1, .5, {x: '+=10', rease: Sine.easeOut})
-            .to(txt1, 3, {x: '-=10', rotation:0, ease: Sine.easeIn});
 
         var total = 50;
         var container = document.getElementById("container"), w = window.innerWidth, h = window.innerHeight;
@@ -183,21 +199,6 @@ app.Animation = (function () {
                     tl5.play()
                 }
             });
-
-
-        tltxt.to(txtbox, .25, {opacity: 1}, "+=.75")
-            .fromTo(txtbox, .25, {y: "-=20"}, {y: "+=23", ease: Sine.easeOut}, "-=.25")
-            .to(txtbox, .1, {y: "-=3", ease: Sine.easeInOut})
-
-            .to(txt2, .25, {opacity: 1}, "+=1.25")
-            .fromTo(txt2, .25, {y: "-=20"}, {y: "+=23", ease: Sine.easeOut}, "-=.25")
-            .to(txt2, .1, {y: "-=3", ease: Sine.easeInOut})
-
-            .to(txt3, .25, {opacity: 1}, "+=1")
-
-            .to(cta, .25, {opacity: 1}, "+=.75")
-            .fromTo(cta, .25, {y: "-=20"}, {y: "+=23", ease: Sine.easeOut}, "-=.25")
-            .to(cta, .2, {y: "-=3", ease: Sine.easeInOut});
 
 
         tl1.to(pin1, 1, {y: '+=5', ease: Sine.easeInOut})

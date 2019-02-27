@@ -17,10 +17,24 @@ body {
     opacity: 0;
 
     .dot{
-        width:4px;
-        height:4px;
+        width:6px;
+        height:2px;
         border-radius: 2px;
         background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+        position:absolute;
+    }
+
+    #theSVG {
+        left:0;
+        top:0;
+        opacity:0;
+        position:absolute;
+    }
+
+    #theSVG2 {
+        left:93px;
+        top:108px;
+        opacity:0;
         position:absolute;
     }
 
@@ -42,19 +56,13 @@ body {
         position: absolute;
     }
 
-    #txtbox {
+    #txt1 {
         left: 0;
         top: 0;
-        opacity:0;
+        opacity: 0;
+        clip: rect(0px, 300px, 45px, 0px);
+        transform: translate3d(0, 0, 0.1px);
         position: absolute;
-        #txt1 {
-            left: 0;
-            top: 0;
-            //opacity: 0;
-            clip: rect(0px, 300px, 45px, 0px);
-            transform: translate3d(0, 0, 0.1px);
-            position: absolute;
-        }
     }
 
     #txt2 {

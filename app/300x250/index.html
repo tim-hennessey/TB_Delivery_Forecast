@@ -23,9 +23,7 @@
     <img id="icicle1" src="images/icicle1.png" alt=""/>
     <img id="icicle2" src="images/icicle2.png" alt=""/>
 
-    <div id="txtbox">
-        <img id="txt1" src="images/txt.png" alt=""/>
-    </div>
+    <img id="txt1" src="images/txt.png" alt=""/>
     <img id="txt2" src="images/txt.png" alt=""/>
     <img id="txt3" src="images/txt.png" alt=""/>
 
@@ -36,18 +34,118 @@
     <img id="pin5" src="images/pin.png" alt=""/>
 
 
+    <svg version="1.1" id="theSVG" viewBox="0 0 300 108" width="300" height="108" xml:space="preserve">
+            <defs>
+                <mask id="lineOneMasker">
+                    <rect class="gradientBox" fill="url(#lineOneGradient)" x="0" y="0" width="300" height="108"/>
+                </mask>
+
+                <pattern id="lineOneShapes" patternUnits="userSpaceOnUse" width="300" height="108">
+                    <image xlink:href="images/txt1.png" x="0" y="0" width="300" height="108" />
+                </pattern>
+
+                <lineargradient id="lineOneGradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="300" y2="108">
+                    <stop  offset="5%" style="stop-color:#ffffff"/>
+                    <stop  offset="95%" style="stop-color:#000000"/>
+                </lineargradient>
+
+
+
+                <mask id="lineTwoMasker">
+                    <rect class="gradientBox" fill="url(#lineTwoGradient)" x="0" y="0" width="300" height="108"/>
+                </mask>
+
+                <pattern id="lineTwoShapes" patternUnits="userSpaceOnUse" width="300" height="108">
+                    <image xlink:href="images/txt2.png" x="0" y="0" width="300" height="108" />
+                </pattern>
+
+                <lineargradient id="lineTwoGradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="300" y2="108">
+                    <stop  offset="5%" style="stop-color:#ffffff"/>
+                    <stop  offset="95%" style="stop-color:#000000"/>
+                </lineargradient>
+
+
+
+                <mask id="lineThreeMasker">
+                    <rect class="gradientBox" fill="url(#lineThreeGradient)" x="0" y="0" width="300" height="108"/>
+                </mask>
+
+                <pattern id="lineThreeShapes" patternUnits="userSpaceOnUse" width="300" height="108">
+                    <image xlink:href="images/txt3.png" x="0" y="0" width="300" height="108" />
+                </pattern>
+
+                <lineargradient id="lineThreeGradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="300" y2="108">
+                    <stop  offset="5%" style="stop-color:#ffffff"/>
+                    <stop  offset="95%" style="stop-color:#000000"/>
+                </lineargradient>
+
+
+
+            </defs>
+
+            <g mask="url(#lineOneMasker)">
+                <rect id="lineOne" width="300" height="108" x="0" y="0" fill="url(#lineOneShapes)" />
+            </g>
+
+        <g mask="url(#lineTwoMasker)">
+                <rect id="lineTwo" width="300" height="108" x="0" y="0" fill="url(#lineTwoShapes)" />
+            </g>
+
+        <g mask="url(#lineThreeMasker)">
+                <rect id="lineThree" width="300" height="108" x="0" y="0" fill="url(#lineThreeShapes)" />
+            </g>
+
+
+        </svg>
+
+
+
 
     <div id="cta">
         <img id="cta_img" src="images/cta.png" alt=""/>
         <div id="cta_bg"></div>
     </div>
 
+
+    <svg version="1.1" id="theSVG2" viewBox="93 108 115 44" width="115" height="44" xml:space="preserve">
+            <defs>
+                <mask id="CTAMasker">
+                    <rect class="gradientBox" fill="url(#CTAGradient)" x="93" y="108" width="115" height="44"/>
+                </mask>
+
+                <pattern id="CTAShapes" patternUnits="userSpaceOnUse" width="115" height="44" x="-22" y="-24">
+                    <image xlink:href="images/cta_mask.png" x="0" y="0" width="115" height="44" />
+                </pattern>
+
+                 <lineargradient id="CTAGradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="300" y2="108">
+                    <stop  offset="5%" style="stop-color:#ffffff"/>
+                    <stop  offset="95%" style="stop-color:#000000"/>
+                </lineargradient>
+
+            </defs>
+
+            <g mask="url(#CTAMasker)">
+                <rect id="lineCTA" width="115" height="44" x="93" y="108" fill="url(#CTAShapes)" />
+            </g>
+
+        </svg>
+
+
+
+
+
+
+
+
+
+
+
     <div id="border"></div>
     <div id="button-exit"></div>
 
 </div>
 <script
-    src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script>
+        src="https://s0.2mdn.net/ads/studio/cached_libs/tweenmax_1.19.0_643d6911392a3398cb1607993edabfa7_min.js"></script>
 
 <!-- build:js scripts/main.js -->
 
