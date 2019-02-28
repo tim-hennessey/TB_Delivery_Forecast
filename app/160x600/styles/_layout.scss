@@ -1,0 +1,153 @@
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #555;
+}
+
+#banner {
+    background: #94b6e4;
+    position: absolute;
+    overflow: hidden;
+    width: $banner-width;
+    height: $banner-height;
+    left: 50%;
+    top: 50%;
+    margin-left: -$banner-width / 2;
+    margin-top: -$banner-height / 2;
+    opacity:0;
+
+    #fog {
+        left: 0;
+        top: 0;
+        width: $banner-width;
+        height: 400px;
+        opacity: .33;
+        background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 1) 70%);
+        position: absolute;
+    }
+
+    #icicle1 {
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+
+    #icicle2 {
+        right: 0;
+        top: 0;
+        position: absolute;
+    }
+
+    #city {
+        left: 0;
+        bottom: 0;
+        position: absolute;
+    }
+
+    #txtbox {
+        left: 0;
+        top: 0;
+        opacity:0;
+        position: absolute;
+        #txt1 {
+            left: 0;
+            top: 0;
+            //opacity: 0;
+            clip: rect(0px, 160px, 100px, 0px);
+            transform: translate3d(0, 0, 0.1px);
+            position: absolute;
+        }
+    }
+
+    #car {
+        left: 75px;
+        bottom: 73px;
+        width:55px;
+        height:36px;
+        position: absolute;
+
+        #car_upper {
+            position: absolute;
+        }
+
+        #car_lower {
+            position: absolute;
+        }
+    }
+
+
+    #txt2 {
+        left: 0;
+        top: 0;
+        opacity:0;
+        clip: rect(100px, 160px, 200px, 0px);
+        transform: translate3d(0, 0, 0.1px);
+        position: absolute;
+    }
+
+    #txt3 {
+        left: 0;
+        top: 0;
+        opacity:0;
+        clip: rect(200px, 160px, 250px, 0px);
+        transform: translate3d(0, 0, 0.1px);
+        position: absolute;
+    }
+
+    #pin {
+        left: 48px;
+        bottom: 156px;
+        transform: translate3d(0, 0, 0.1px);
+        position: absolute;
+    }
+
+
+
+    #cta {
+        left: 12px;
+        top: 273px;
+        width: 137px;
+        height: 60px;
+        opacity:0;
+        position: absolute;
+
+        #cta_img {
+            z-index: 2;
+            transform: translate3d(0, 0, 0.1px);
+            position: absolute;
+        }
+        #cta_bg {
+            left: 2px;
+            top: 2px;
+            width: 133px;
+            height: 30px;
+            background: #3e68a2;
+            position: absolute;
+        }
+    }
+
+    #button-exit {
+        background-color: rgba(255, 255, 255, 0);
+        cursor: pointer;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+    }
+
+    #border {
+        border: 1px solid #ccc;
+        display: block;
+        width: $banner-width - 2;
+        height: $banner-height - 2;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        position: absolute;
+        z-index: 999;
+    }
+
+
+}

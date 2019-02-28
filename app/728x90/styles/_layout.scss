@@ -1,0 +1,135 @@
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #555;
+}
+
+#banner {
+    background: #94b6e4;
+    position: absolute;
+    overflow: hidden;
+    width: $banner-width;
+    height: $banner-height;
+    left: 50%;
+    top: 50%;
+    margin-left: -$banner-width / 2;
+    margin-top: -$banner-height / 2;
+    opacity:0;
+
+    #fog {
+        left: 0;
+        top: 0;
+        width: $banner-width;
+        height: 200px;
+        opacity: .33;
+        background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 1) 70%);
+        position: absolute;
+    }
+
+    #icicle1 {
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+
+    #icicle2 {
+        right: 0;
+        top: 0;
+        position: absolute;
+    }
+
+    #city {
+        right: 0;
+        bottom: 0;
+        position: absolute;
+    }
+
+    #txtbox {
+        left: 0;
+        top: 0;
+        opacity:0;
+        position: absolute;
+        #txt1 {
+            left: 109px;
+            top: 0;
+            clip: rect(0px, 140px, 50px, 0px);
+            transform: translate3d(0, 0, 0.1px);
+            position: absolute;
+        }
+    }
+
+    #txt2 {
+        left: 109px;
+        top: 0;
+        opacity:0;
+        clip: rect(0px, 358px, 50px, 140px);
+        transform: translate3d(0, 0, 0.1px);
+        position: absolute;
+    }
+
+    #txt3 {
+        left: 109px;
+        top: 0;
+        opacity:0;
+        clip: rect(50px, 358px, 76px, 0px);
+        transform: translate3d(0, 0, 0.1px);
+        position: absolute;
+    }
+
+    #pin {
+        left: 35px;
+        bottom: 8px;
+        transform: translate3d(0, 0, 0.1px);
+        position: absolute;
+    }
+
+
+
+    #cta {
+        right: 80px;
+        top: 12px;
+        width: 138px;
+        height: 50px;
+        opacity:0;
+        position: absolute;
+
+        #cta_img {
+            z-index: 2;
+            transform: translate3d(0, 0, 0.1px);
+            position: absolute;
+        }
+        #cta_bg {
+            left: 2px;
+            top: 2px;
+            width: 134px;
+            height: 20px;
+            background: #3e68a2;
+            position: absolute;
+        }
+    }
+
+    #button-exit {
+        background-color: rgba(255, 255, 255, 0);
+        cursor: pointer;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+    }
+
+    #border {
+        border: 1px solid #ccc;
+        display: block;
+        width: $banner-width - 2;
+        height: $banner-height - 2;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        position: absolute;
+        z-index: 999;
+    }
+
+
+}
