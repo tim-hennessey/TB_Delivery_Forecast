@@ -23,9 +23,6 @@ app.Animation = (function () {
 
         t.set("#container", {perspective: 600});
         t.set("#container2", {perspective: 600});
-
-
-        // t.set(txt1, {transformOrigin: "20% 50%"});
         t.set(banner, {opacity: 1});
         t.set(pin, {y:"-=10", transformOrigin: "50% 100%"});
 

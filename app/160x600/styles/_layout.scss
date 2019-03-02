@@ -73,33 +73,6 @@ body {
     }
 
 
-    #txt1 {
-        left: 0;
-        top: 0;
-        opacity: 0;
-        clip: rect(0px, 160px, 100px, 0px);
-        transform: translate3d(0, 0, 0.1px);
-        position: absolute;
-    }
-
-    #txt2 {
-        left: 0;
-        top: 0;
-        opacity:0;
-        clip: rect(100px, 160px, 200px, 0px);
-        transform: translate3d(0, 0, 0.1px);
-        position: absolute;
-    }
-
-    #txt3 {
-        left: 0;
-        top: 0;
-        opacity:0;
-        clip: rect(200px, 160px, 250px, 0px);
-        transform: translate3d(0, 0, 0.1px);
-        position: absolute;
-    }
-
     #pin {
         left: 48px;
         bottom: 156px;

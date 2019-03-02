@@ -56,33 +56,6 @@ body {
         position: absolute;
     }
 
-    #txt1 {
-        left: 0;
-        top: 0;
-        opacity: 0;
-        clip: rect(0px, 300px, 45px, 0px);
-        transform: translate3d(0, 0, 0.1px);
-        position: absolute;
-    }
-
-    #txt2 {
-        left: 0;
-        top: 0;
-        opacity: 0;
-        clip: rect(45px, 300px, 80px, 0px);
-        transform: translate3d(0, 0, 0.1px);
-        position: absolute;
-    }
-
-    #txt3 {
-        left: 0;
-        top: 0;
-        opacity: 0;
-        clip: rect(80px, 300px, 108px, 0px);
-        transform: translate3d(0, 0, 0.1px);
-        position: absolute;
-    }
-
     #pin1 {
         left: 10px;
         bottom: 88px;

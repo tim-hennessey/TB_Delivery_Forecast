@@ -78,6 +78,20 @@
                 </lineargradient>
 
 
+                <mask id="lineFourMasker">
+                    <rect class="gradientBox" fill="url(#lineFourGradient)" x="0" y="0" width="160" height="250"/>
+                </mask>
+
+                <pattern id="lineFourShapes" patternUnits="userSpaceOnUse" width="160" height="250">
+                    <image xlink:href="images/txt4.png" x="0" y="0" width="160" height="250" />
+                </pattern>
+
+                <lineargradient id="lineFourGradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="160" y2="250">
+                    <stop  offset="5%" style="stop-color:#ffffff"/>
+                    <stop  offset="95%" style="stop-color:#000000"/>
+                </lineargradient>
+
+
 
             </defs>
 
@@ -91,6 +105,10 @@
 
         <g mask="url(#lineThreeMasker)">
                 <rect id="lineThree" width="160" height="250" x="0" y="0" fill="url(#lineThreeShapes)" />
+            </g>
+
+        <g mask="url(#lineFourMasker)">
+                <rect id="lineFour" width="160" height="250" x="0" y="0" fill="url(#lineFourShapes)" />
             </g>
 
 

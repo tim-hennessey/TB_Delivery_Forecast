@@ -8,19 +8,11 @@ app.Animation = (function () {
     var cartl = new TimelineMax();
     var pintl = new TimelineMax();
     var tltxt = new TimelineMax();
-    // var wiggletl = new TimelineMax({repeat: -1});
-
     var car = document.getElementById('car');
     var car_upper = document.getElementById('car_upper');
     var pin = document.getElementById('pin');
-    // var txt1 = document.getElementById('txt1');
-    // var txt2 = document.getElementById('txt2');
-    // var txt3 = document.getElementById('txt3');
-    // var txtbox = document.getElementById('txtbox');
     var icicle1 = document.getElementById('icicle1');
     var icicle2 = document.getElementById('icicle2');
-
-    // var fog = document.getElementById('fog');
     var cta = document.getElementById('cta');
     var cta_bg = document.getElementById('cta_bg');
     var buttonExit = document.getElementById('button-exit');
@@ -41,7 +33,6 @@ app.Animation = (function () {
         t.set("#container", {perspective: 600});
         t.set("#container2", {perspective: 600});
         t.set(pin, {y:"-=10", transformOrigin: "50% 100%"});
-        // t.set(fog, {scale: 2, transformOrigin: "50% 50%"});
 
         t.set(icicle1, {y: "-=25", scaleY: .5, transformOrigin: "50% 0%"});
         t.set(icicle2, {y: "-=25", scaleY: .5, transformOrigin: "50% 0%"});

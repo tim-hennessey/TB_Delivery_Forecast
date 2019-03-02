@@ -24,16 +24,16 @@ app.Animation = (function () {
     var CTAGradient = document.getElementById('CTAGradient');
 
     var tltxt = new TimelineMax();
-    
+
     var pin1 = document.getElementById('pin1');
     var pin2 = document.getElementById('pin2');
     var pin3 = document.getElementById('pin3');
     var pin4 = document.getElementById('pin4');
     var pin5 = document.getElementById('pin5');
 
-    var txt1 = document.getElementById('txt1');
-    var txt2 = document.getElementById('txt2');
-    var txt3 = document.getElementById('txt3');
+    // var txt1 = document.getElementById('txt1');
+    // var txt2 = document.getElementById('txt2');
+    // var txt3 = document.getElementById('txt3');
 
     var icicle1 = document.getElementById('icicle1');
     var icicle2 = document.getElementById('icicle2');

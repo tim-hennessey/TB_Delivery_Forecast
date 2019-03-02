@@ -12,10 +12,6 @@ app.Animation = (function () {
     var car = document.getElementById('car');
     var car_upper = document.getElementById('car_upper');
     var pin = document.getElementById('pin');
-    var txt1 = document.getElementById('txt1');
-    var txt2 = document.getElementById('txt2');
-    var txt3 = document.getElementById('txt3');
-
     var icicle1 = document.getElementById('icicle1');
     var icicle2 = document.getElementById('icicle2');
 
@@ -24,6 +20,7 @@ app.Animation = (function () {
     var lineOneGradient = document.getElementById('lineOneGradient');
     var lineTwoGradient = document.getElementById('lineTwoGradient');
     var lineThreeGradient = document.getElementById('lineThreeGradient');
+    var lineFourGradient = document.getElementById('lineFourGradient');
     var CTAGradient = document.getElementById('CTAGradient');
 
     var cta = document.getElementById('cta');
@@ -61,6 +58,7 @@ app.Animation = (function () {
         t.set(lineOneGradient, {attr:{x1:-480, x2:-320}});
         t.set(lineTwoGradient, {attr:{x1:-480, x2:-320}});
         t.set(lineThreeGradient, {attr:{x1:-480, x2:-320}});
+        t.set(lineFourGradient, {attr:{x1:-480, x2:-320}});
         t.set(CTAGradient, {attr:{x1:-480, x2:-320}});
         t.set(theSVG, {opacity:1});
         t.set(theSVG2, {opacity:1});
@@ -80,6 +78,7 @@ app.Animation = (function () {
         tltxt.to(lineOneGradient, 1.5, {attr:{x1:320, x2:480}},"+=1")
             .to(lineTwoGradient, 1.5, {attr:{x1:320, x2:480}}, "-=.5")
             .to(lineThreeGradient, 1.5, {attr:{x1:320, x2:480}}, "-=.5")
+            .to(lineFourGradient, 1.5, {attr:{x1:320, x2:480}}, "-=.5")
             .to(CTAGradient, 1.5, {attr:{x1:320, x2:480}})
             .to(cta, .5, {opacity: 1}, "-=.5")
             .to(theSVG2, .5, {opacity: 0}, "-=.5");
