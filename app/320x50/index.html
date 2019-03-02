@@ -15,15 +15,57 @@
 <body>
 <div id="banner">
 
-    <div id="fog"></div>
     <img id="city" src="images/city.png" alt=""/>
-    <div id="txtbox">
-        <img id="txt1" src="images/txt.png" alt=""/>
-    </div>
-    <img id="txt2" src="images/txt.png" alt=""/>
-    <img id="txt3" src="images/txt.png" alt=""/>
+    <div id="container"></div>
+    <div id="container2"></div>
 
     <img id="pin" src="images/pin.png" alt=""/>
+
+    <svg version="1.1" id="theSVG" viewBox="0 0 320 50" width="320" height="50" xml:space="preserve">
+            <defs>
+                <mask id="lineOneMasker">
+                    <rect class="gradientBox" fill="url(#lineOneGradient)" x="0" y="0" width="320" height="50"/>
+                </mask>
+
+                <pattern id="lineOneShapes" patternUnits="userSpaceOnUse" width="320" height="50">
+                    <image xlink:href="images/txt1.png" x="0" y="0" width="320" height="50" />
+                </pattern>
+
+                <lineargradient id="lineOneGradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="320" y2="50">
+                    <stop  offset="5%" style="stop-color:#ffffff"/>
+                    <stop  offset="95%" style="stop-color:#000000"/>
+                </lineargradient>
+
+
+
+                <mask id="lineTwoMasker">
+                    <rect class="gradientBox" fill="url(#lineTwoGradient)" x="0" y="0" width="320" height="50"/>
+                </mask>
+
+                <pattern id="lineTwoShapes" patternUnits="userSpaceOnUse" width="320" height="50">
+                    <image xlink:href="images/txt2.png" x="0" y="0" width="320" height="50" />
+                </pattern>
+
+                <lineargradient id="lineTwoGradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="320" y2="50">
+                    <stop  offset="5%" style="stop-color:#ffffff"/>
+                    <stop  offset="95%" style="stop-color:#000000"/>
+                </lineargradient>
+
+
+
+            </defs>
+
+            <g mask="url(#lineOneMasker)">
+                <rect id="lineOne" width="320" height="50" x="0" y="0" fill="url(#lineOneShapes)" />
+            </g>
+
+        <g mask="url(#lineTwoMasker)">
+                <rect id="lineTwo" width="320" height="50" x="0" y="0" fill="url(#lineTwoShapes)" />
+            </g>
+
+
+
+        </svg>
 
     <div id="border"></div>
     <div id="button-exit"></div>

@@ -16,14 +16,26 @@ body {
     margin-top: -$banner-height / 2;
     opacity:0;
 
-    #fog {
-        left: 0;
-        top: 0;
-        width: $banner-width;
-        height: 400px;
-        opacity: .33;
-        background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 55%, rgba(255, 255, 255, 1) 70%);
-        position: absolute;
+    .dot{
+        width:6px;
+        height:2px;
+        border-radius: 2px;
+        background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+        position:absolute;
+    }
+
+    #theSVG {
+        left:0;
+        top:0;
+        opacity:0;
+        position:absolute;
+    }
+
+    #theSVG2 {
+        left:58px;
+        top:194px;
+        opacity:0;
+        position:absolute;
     }
 
     #icicle1 {
