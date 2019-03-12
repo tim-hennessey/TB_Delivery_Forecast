@@ -1,0 +1,76 @@
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #555;
+}
+
+#banner {
+    background: #94b6e4;
+    position: absolute;
+    overflow: hidden;
+    width: $banner-width;
+    height: $banner-height;
+    left: 50%;
+    top: 50%;
+    margin-left: -$banner-width / 2;
+    margin-top: -$banner-height / 2;
+    opacity:0;
+
+    .dot{
+        width:6px;
+        height:2px;
+        border-radius: 2px;
+        background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+        position:absolute;
+    }
+
+  #txt1 {
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+
+  #txt2 {
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+
+    #city {
+        right: 0;
+        bottom: 0;
+        position: absolute;
+    }
+
+    #pin {
+        left: 11px;
+        bottom: 3px;
+        transform: translate3d(0, 0, 0.1px);
+        position: absolute;
+    }
+
+    #button-exit {
+        background-color: rgba(255, 255, 255, 0);
+        cursor: pointer;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+    }
+
+    #border {
+        border: 1px solid #ccc;
+        display: block;
+        width: $banner-width - 2;
+        height: $banner-height - 2;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        position: absolute;
+        z-index: 999;
+    }
+
+
+}

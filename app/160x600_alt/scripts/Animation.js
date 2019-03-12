@@ -15,16 +15,10 @@ app.Animation = (function () {
     var icicle1 = document.getElementById('icicle1');
     var icicle2 = document.getElementById('icicle2');
 
-    var lineOneSVG = document.getElementById('lineOneSVG');
-    var lineTwoSVG = document.getElementById('lineTwoSVG');
-    var lineThreeSVG = document.getElementById('lineThreeSVG');
-    var lineFourSVG = document.getElementById('lineFourSVG');
-    var ctaSVG = document.getElementById('ctaSVG');
-    var lineOneGradient = document.getElementById('lineOneGradient');
-    var lineTwoGradient = document.getElementById('lineTwoGradient');
-    var lineThreeGradient = document.getElementById('lineThreeGradient');
-    var lineFourGradient = document.getElementById('lineFourGradient');
-    var CTAGradient = document.getElementById('CTAGradient');
+    var txt1 = document.getElementById('txt1');
+    var txt2 = document.getElementById('txt2');
+    var txt3 = document.getElementById('txt3');
+    var txt4 = document.getElementById('txt4');
 
     var cta = document.getElementById('cta');
     var cta_bg = document.getElementById('cta_bg');
@@ -58,17 +52,6 @@ app.Animation = (function () {
     // Starts the animation
     function start() {
 
-        t.set(lineOneGradient, {attr:{x1:-480, x2:-320}});
-        t.set(lineTwoGradient, {attr:{x1:-480, x2:-320}});
-        t.set(lineThreeGradient, {attr:{x1:-480, x2:-320}});
-        t.set(lineFourGradient, {attr:{x1:-480, x2:-320}});
-        t.set(CTAGradient, {attr:{x1:-480, x2:-320}});
-        t.set(lineOneSVG, {opacity:1});
-        t.set(lineTwoSVG, {opacity:1});
-        t.set(lineThreeSVG, {opacity:1});
-        t.set(lineFourSVG, {opacity:1});
-        t.set(ctaSVG, {opacity:1});
-
         t.to(icicle1, 5, {y: "+=25", scaleY: 1, ease: Sine.easeOut});
         t.to(icicle2, 5, {y: "+=25", scaleY: 1, ease: Sine.easeOut});
 
@@ -81,13 +64,11 @@ app.Animation = (function () {
 
 
 
-        tltxt.to(lineOneGradient, 1.5, {attr:{x1:320, x2:480}},"+=1")
-            .to(lineTwoGradient, 1.5, {attr:{x1:320, x2:480}}, "-=.5")
-            .to(lineThreeGradient, 1.5, {attr:{x1:320, x2:480}}, "-=.5")
-            .to(lineFourGradient, 1.5, {attr:{x1:320, x2:480}}, "-=.5")
-            .to(CTAGradient, 1.5, {attr:{x1:320, x2:480}})
-            .to(cta, .5, {opacity: 1}, "-=.5")
-            .to(ctaSVG, .5, {opacity: 0}, "-=.5");
+        tltxt.from(txt1, 1, {opacity:0, x:"-=20", ease: Sine.easeOut},"+=1")
+            .from(txt2, 1, {opacity:0, x:"-=20", ease: Sine.easeOut}, "-=.5")
+            .from(txt3, 1, {opacity:0, x:"-=20", ease: Sine.easeOut}, "-=.5")
+            .from(txt4, 1, {opacity:0, x:"-=20", ease: Sine.easeOut})
+            .from(cta, 1, {opacity:0, x:"-=10", ease: Sine.easeOut}, "+=1");
 
 
         tl1.to(pin, 1, {y: '+=5', ease: Sine.easeInOut})
